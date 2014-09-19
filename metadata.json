@@ -22,8 +22,5 @@
   "source": "https://github.com/Nekroze/puppet-director.git",
   "summary": "Directs puppet nodes to become a different node.",
   "types": [],
-  "version": "0.1.1"
-  "dependencies": [
-  { "name": "puppetlabs/stdlib" },
-  ]
+  "version": "0.1.2"
 }
