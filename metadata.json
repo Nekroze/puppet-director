@@ -1,0 +1,26 @@
+{
+  "author": "Taylor \"Nekroze\" Lawson",
+  "checksums": {
+    "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
+    "manifests/params.pp": "3bf06cbc8137aee9f90aaa03cc56f221",
+    "manifests/init.pp": "a2d24bea64363dbc25c6d24af8842290",
+    "Modulefile": "3eb85c0c18357f24d95447c7643a8dde",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "tests/init.pp": "4d285c14316e1975c77b5de7cb2d1a27",
+    "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+    "README.markdown": "914fa6d3da4c3169e2829dcb2d2598cb"
+  },
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib"
+    }
+  ],
+  "description": "",
+  "license": "MIT",
+  "name": "nekroze-director",
+  "project_page": "",
+  "source": "",
+  "summary": "Directs puppet nodes to become a different node.",
+  "types": [],
+  "version": "0.1.0"
+}
