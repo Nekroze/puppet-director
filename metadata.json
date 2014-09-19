@@ -15,12 +15,15 @@
       "name": "puppetlabs/stdlib"
     }
   ],
-  "description": "",
+  "description": "Directs puppet nodes to become a different node",
   "license": "MIT",
   "name": "nekroze-director",
-  "project_page": "",
-  "source": "",
+  "project_page": "https://github.com/Nekroze/puppet-director",
+  "source": "https://github.com/Nekroze/puppet-director.git",
   "summary": "Directs puppet nodes to become a different node.",
   "types": [],
-  "version": "0.1.0"
+  "version": "0.1.1"
+  "dependencies": [
+  { "name": "puppetlabs/stdlib" },
+  ]
 }
