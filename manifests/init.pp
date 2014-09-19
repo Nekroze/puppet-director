@@ -20,12 +20,17 @@ class director (
    file_line { 'hostname':
      path  => '/etc/sysconfig/network',
      line  => "HOSTNAME=$hostname",
-     match => "^HOSTNAME=*"
+     match => '^HOSTNAME=*'
    }
    file_line { 'ip':
      path  => "/etc/sysconfig/network-scripts/ifcfg-$interface",
      line  => "IPADDR=$ip",
-     match => "^IPADDR=*"
+     match => '^IPADDR=*'
+   }
+   file_lane { 'certname':
+     path  => '/etc/puppet/puppet.conf',
+     line  => "certname=$hostname",
+     match => '^certname=*',
    }
  }
 }
