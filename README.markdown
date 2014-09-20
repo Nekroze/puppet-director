@@ -11,13 +11,12 @@ example
 
     node base.nekroze.local {
       class { 'director':
-        hostname => 'database.nekroze.local',
-        ip       => '192.168.1.21',
+        target => 'database.nekroze.local',
       }
     }
 
-This node definition will cause any puppet agent by the ``certname`` of ``base.nekroze.local`` to change its hostname to
-``database.nekroze.local`` and the ip address to ``192.168.1.21`` while also updating the machines puppet agent ``certname``
+This node definition will cause any puppet agent by the ``certname`` of ``base.nekroze.local`` to change its ``certname`` to
+``database.nekroze.local``.
 
 What this means is that after the first puppet agent run (eg. ``puppet agent -t``) this machine will start pulling the
 definition for ``database.nekroze.local``.

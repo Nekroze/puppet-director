@@ -11,26 +11,11 @@
 # Sample Usage:
 #
 class director (
-  $enabled   = $director::params::enabled,
-  $hostname  = $director::params::hostname,
-  $ip        = $director::params::ip,
-  $interface = $director::params::interface,
+  $target = $director::params::target,
 ) inherits director::params {
- if $enabled == true {
-   file_line { 'hostname':
-     path  => '/etc/sysconfig/network',
-     line  => "HOSTNAME=$hostname",
-     match => '^HOSTNAME=*'
-   }
-   file_line { 'ip':
-     path  => "/etc/sysconfig/network-scripts/ifcfg-$interface",
-     line  => "IPADDR=$ip",
-     match => '^IPADDR=*'
-   }
-   file_lane { 'certname':
-     path  => '/etc/puppet/puppet.conf',
-     line  => "certname=$hostname",
-     match => '^certname=*',
-   }
+ file_lane { 'certname':
+   path  => '/etc/puppet/puppet.conf',
+   line  => "certname=$hostname",
+   match => '^certname=*',
  }
 }
